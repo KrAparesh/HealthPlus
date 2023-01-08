@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
+  <title>Doctor's Dashboard</title>
+
+  <style>
+    body {
+      background-image: linear-gradient(50deg, #a1ffe4, #5390D9);
+
+      overflow-x: hidden;
+      overflow-y: hidden;
+      text-align: center;
+    }
+
+    .box1 {
+      border: solid rgb(0, 0, 0);
+      height: 650px;
+      width: 95%;
+      border-radius: 65px;
+      margin-top: 30px;
+      margin-left: 30px;
+      margin-right: 50px;
+      margin-bottom: 60px;
+      background-color: #7feabd;
+      /* box-shadow: 5px 5px 5px #333 ; */
+      border: none;
+      position: absolute;
+      box-shadow: inset 0px 4.09653px 122.896px rgba(0, 0, 0, 0.25);
+      text-align: right;
+
+    }
+
+    .box2 {
+      background-color: #d1f3cc;
+      border: solid black;
+      height: 95%;
+      width: 90%;
+      border-radius: 81px;
+      margin-top: 20px;
+      margin-left: 115px;
+      border: none;
+      display: flex;
+      justify-content: start;
+      box-shadow: 5px 5px 5px #333;
+    }
+
+    .Logo {
+      height: 80px;
+      width: 80px;
+      float: left;
+      margin-top: 37px;
+      margin-left: 22px;
+      border: solid black 1px;
+      border-radius: 27px;
+    }
+
+    .helloDr {
+
+      width: 379.79px;
+      height: 52.73px;
+      text-align: center;
+      font-size: 20px;
+      border: none;
+      padding: 10px;
+      font-style: italic;
+      font-family: sans-serif;
+    }
+
+    span {
+      color: #3E36B0;
+      font-family: cursive;
+      font-style: normal;
+      text-shadow: 1px #333;
+      font-size: xx-large;
+
+    }
+
+    .profile {
+      height: 60px;
+      width: 60px;
+      border: dashed rgb(76, 76, 216);
+      border-radius: 1000px;
+      margin-top: 25px;
+      margin-right: 3.5rem;
+    }
+
+   
+    .container {
+      display: flex;
+      overflow-x: scroll;
+      padding: 14px;
+      width: 770px;
+      scroll-snap-type: x mandatory;
+      scroll-padding: 25px;
+      border-radius: 24px;
+      background: linear-gradient(#D1F3CC, #94ff84);
+      gap: 5%;
+    }
+
+    .container.item {
+      flex: 0 0 100%;
+      padding: 24px;
+      margin: 40px;
+      border-radius: 8px;
+    }
+
+
+    .ul1 {
+      list-style: none;
+      text-align: left;
+    }
+
+    #Patient {
+      border: none;
+      background-image: linear-gradient(to bottom right, rgb(62, 241, 254), rgb(6, 125, 185));
+    }
+
+    #PatientI {
+      border: none;
+      background-image: linear-gradient(to bottom right, rgb(62, 241, 254), rgb(6, 125, 185));
+    }
+
+    #PatientII {
+      border: none;
+      background-image: linear-gradient(to bottom right, #86E5FF, #03a18f);
+    }
+
+    #PatientIII {
+      border: none;
+      background-image: linear-gradient(to bottom right, #51cbff, #43f069);
+    }
+
+    #PatientIV {
+      border: none;
+      box-shadow: 3px 2px 5px #333;
+      background-image: linear-gradient(to bottom left, #00FFAB, #14C38E);
+    }
+
+    .container1 {
+      top: 50%;
+      left: 15.5rem;
+      position: absolute;
+      text-align: center;
+      transform: translate(-50%, -50%);
+      display: flex;
+      margin-top: 70px;
+      flex-direction: column;
+    }
+
+    /* Apply css properties to ui-widgets class */
+    .ui-widgets {
+      position: relative;
+      display: inline-block;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 9rem;
+      margin: 1.5rem;
+      border: 1.2rem solid palegreen;
+      box-shadow: inset 0 0 7px grey;
+      border-left-color: palegreen;
+      border-top-color: chartreuse;
+      border-right-color: darkgreen;
+      border-bottom-color: white;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    /* Apply css properties to the second
+    child of ui-widgets class */
+    .ui-widgets:nth-child(2) {
+      border-top-color: chartreuse;
+      border-right-color: white;
+      border-left-color: palegreen;
+      border-bottom-color: white;
+    }
+
+    /* Apply css properties to ui-widgets
+   class and ui-values class */
+    .ui-widgets .ui-values {
+      top: 40px;
+      position: absolute;
+      left: 10px;
+      right: 0;
+      font-weight: 700;
+      font-size: 2.0rem;
+    }
+
+    /*  Apply css properties to ui-widgets 
+class and ui-labels class */
+    .ui-widgets .ui-labels {
+      left: 0;
+      bottom: -16px;
+      text-shadow: 0 0 4px grey;
+      color: black;
+      position: absolute;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    /* Editing wrap class */
+
+    .wrap-1 {
+      height: 100%;
+      width: 100%;
+      justify-content: space-around;
+    }
+
+    .quote {
+      border: none;
+      box-shadow: 5px 4px 5px rgb(169, 169, 169);
+      width: 840px;
+      height: 40px;
+      border-radius: 56px;
+      margin-bottom: 20px;
+      background-color: #c4fcd6;
+    }
+
+    .text {
+      font-size: 25px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">
+    <img class="Logo" src="images/logo.png" alt="" />
+
+    <div class="box2">
+      <p class="helloDr">
+        Good Morning <span><b>Doctor !</b></span>
+      </p>
+
+      <!-- Creating a ui-widgets classes that 
+        store other useful classes like 
+        ui-values and ui-labels -->
+        <div class="container1">
+            <div class="ui-widgets">
+                <div class="ui-values">85%</div>
+                <div class="ui-labels">Appointments</div>
+            </div>
+      
+            <div class="ui-widgets">
+                <div class="ui-values">50%</div>
+                <div class="ui-labels">Operations</div>
+            </div>
+        </div>
+
+    <!-- The following page is populated with dummy data. The data can also be fetched from Health+ database (refer validators.js (207)). -->
+      <div class="wrap-1">
+        <div class="right-side-panel">
+          <img class="profile" src="images/pm1.jpg" alt="Doctor picture" />
+          <div class="quote">
+            <p class="text">“Our profession is the only one which works unceasingly to annihilate itself.”</p>
+          </div>
+          <div class="container">
+            <div class="item" id="Patient">
+              <b id="Bold">Patient-I</b>
+              <hr>
+              <ul class="ul1">
+                <li>Name: Abhijeet Gupta</li>
+                <li>Age: 42</li>
+                <li>Prescription ID: 2141001196</li>
+                <li>Sex: Male</li>
+                <li>Currently Showing Symptomps:</li>
+                <li>
+                  <ul>
+                    <li>Heart Burn</li>
+                    <li>Body Ache</li>
+                    <li>Fever</li>
+                  </ul>
+                </li>
+                <li>Medications:</li>
+                <ul>
+                  <li>Paracetamol[500mg]</li>
+                  <li>Rabemac-DSR</li>
+                  <li>Zerodol-SP</li>
+
+                </ul>
+              </ul>
+            </div>
+            <div class="item" id="PatientI">
+              <b id="Bold">Patient-II</b>
+              <hr>
+              <ul class="ul1">
+                <li>Name: Abhijeet Gupta</li>
+                <li>Age: 42</li>
+                <li>Prescription ID: 2141001196</li>
+                <li>Sex: Male</li>
+                <li>Currently Showing Symptomps:</li>
+                <li>
+                  <ul>
+                    <li>Heart Burn</li>
+                    <li>Body Ache</li>
+                    <li>Fever</li>
+                  </ul>
+                </li>
+                <li>Medications:</li>
+                <ul>
+                  <li>Paracetamol[500mg]</li>
+                  <li>Rabemac-DSR</li>
+                  <li>Zerodol-SP</li>
+
+                </ul>
+              </ul>
+            </div>
+            <div class="item" id="PatientII">
+              <b id="Bold">Patient-III</b>
+              <hr>
+              <ul class="ul1">
+                <li>Name: Rashmika Das</li>
+                <li>Age: 12</li>
+                <li>Prescription ID: 2140154221</li>
+                <li>Sex: Female</li>
+                <li>Currently Showing Symptomps:</li>
+                <li>
+                  <ul>
+                    <li>Dizzness</li>
+                    <li>Vomiting</li>
+                    <li>Fever</li>
+                  </ul>
+                </li>
+                <li>Medications:</li>
+                <ul>
+                  <li>Paracetamol[500mg]</li>
+                  <li>Antihistamine</li>
+                </ul>
+              </ul>
+            </div>
+            <div class="item" id="PatientIV">
+              <b id="Bold">Patient-IV</b>
+              <hr>
+              <ul class="ul1">
+                <li>Name: Sahil Mishra</li>
+                <li>Age: 27</li>
+                <li>Prescription ID: 214050164</li>
+                <li>Sex: Male</li>
+                <li>Currently Showing Symptomps:</li>
+                <li>
+                  <ul>
+                    <li>Severe Chest Pain</li>
+                    <li>Left Arm Pain</li>
+                    <li>Joint Pain</li>
+                    <li>Weakness</li>
+                  </ul>
+                </li>
+                <li>Medications:</li>
+                <ul>
+                  <li>Nitroglycerin </li>
+                  <li>Actis C2</li>
+                  <li>ORS Mix</li>
+
+                </ul>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

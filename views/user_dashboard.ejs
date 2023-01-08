@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            background: #E8FFF0;
+            overflow-y: hidden;
+        }
+
+        .box_main {
+            position: relative;
+            width: 1280px;
+            height: 728px;
+
+            background: #97C29B;
+            border-radius: 37px;
+        }
+
+        .main_txt h1 {
+            position: absolute;
+            width: 390px;
+            height: 44px;
+            left: 250px;
+            top: 50px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 200;
+            font-size: 30px;
+            line-height: 44px;
+            /* identical to box height */
+
+            text-align: center;
+
+            color: #000000;
+
+        }
+
+        .main_txt p {
+            position: absolute;
+            width: 228px;
+            height: 24px;
+            left: 345px;
+            top: 90px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 270%;
+            /* identical to box height, or 24px */
+
+            text-align: center;
+            letter-spacing: 0.075em;
+
+            color: #000000;
+        }
+
+        .sec1 .txt {
+            position: absolute;
+            width: 258.41px;
+            height: 96.57px;
+            left: 100px;
+            top: 280px;
+
+            color: #000000;
+        }
+
+        .user {
+            box-sizing: border-box;
+
+            position: relative;
+            width: 311px;
+            height: 730px;
+            background: #D1F3CC;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 36px;
+        }
+
+        .sec3 {
+
+            margin-bottom: 100px;
+
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            left: 311px;
+            top: 138px;
+
+            background: #D1F3CC;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .sec1 {
+            width: 90%;
+        }
+
+        .sec3 {
+            width: 900px;
+        }
+
+        .sec3 .uapp {
+            position: absolute;
+            width: 529px;
+            height: 70px;
+            left: -80px;
+            top: 10px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 25px;
+            line-height: 207.02%;
+            /* or 52px */
+
+            text-align: center;
+            letter-spacing: 0.06em;
+
+            color: #000000;
+        }
+
+        .details p {
+            position: absolute;
+            width: 175px;
+            height: 34px;
+            left: 30px;
+            top: 80px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 150%;
+            /* or 11px */
+
+            text-align: center;
+            letter-spacing: 0.10em;
+
+            color: #000000;
+        }
+
+        .details .doc_img {
+            position: absolute;
+            width: 40px;
+            height: 41px;
+            left: 550px;
+            top: 99px;
+        }
+
+        .details .doc {
+            position: absolute;
+            width: 170px;
+            height: 34px;
+            left: 622px;
+            top: 80px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+
+            text-align: center;
+            letter-spacing: 0.10em;
+
+            color: #000000;
+        }
+
+        .details #des {
+            font-style: italic;
+            letter-spacing: 3px;
+
+        }
+
+        .sec3 .date {
+            position: absolute;
+            width: 200px;
+            height: 59px;
+            left: 380px;
+            top: 189px;
+        }
+
+        .sec3 h2 {
+            position: relative;
+            width: 303px;
+            height: 72px;
+            left: 31px;
+            top: 241px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 298%;
+            /* identical to box height, or 72px */
+
+            text-align: center;
+            letter-spacing: 0.075em;
+
+            color: #000000;
+        }
+
+        .progress #pgress {
+            position: absolute;
+            width: 89px;
+            height: 83px;
+            left: 364px;
+            top: 250px;
+
+            background: #D9D9D9;
+            mix-blend-mode: overlay;
+            border-radius: 391px;
+        }
+
+        .progress #pg1ress {
+            position: absolute;
+            width: 89px;
+            height: 79px;
+            left: 364px;
+            top: 376px;
+
+            background: #D9D9D9;
+            mix-blend-mode: overlay;
+            border-radius: 519px;
+        }
+
+        .progress #pg2ress {
+            position: absolute;
+            width: 92px;
+            height: 82px;
+            left: 361px;
+            top: 493px;
+
+            background: #D9D9D9;
+            mix-blend-mode: overlay;
+            border-radius: 245px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box_main">
+        <div class="sec1">
+            <img class="user" src="images/user_dash_1.jpeg" alt="sec1">
+
+            <div class="main_txt">
+                <h1> <b> Hi, <%= name %>!</b></h1>
+                <p>Let’s track your health today!</p>
+            </div>
+        </div>
+        
+        <div class="sec3">
+            <h1 class="uapp">Upcoming appointment</h1>
+            <div class="details">
+                <p> <%= hosp %> <br>
+                    Bhubhaneswar, Orissa</p>
+                <img src="images/pm1.jpg" style=" width: 80px; height: 80px; border-radius: 50%;" class="doc_img" alt="doc">
+                <p class="doc">
+                    <b> Dr. Adnan Shahid</b>
+                    <span id="des">(Pathologist)</span>
+                    On, <%= next_appointment %>
+                </p>
+               
+                <div class="progress">
+                    <h2>Blood Pressure - <%= blood_pressure %></h2>
+                    <br>
+                    <h2>Sugar Level - <%= sugar_level %></h2>
+                    <br>
+                    <h2>Blood Group - <%= blood_group %></h2>
+                </div>
+            </div>
+        </div>
+        <div class="sec2">
+
+        </div>
+    </div>
+</body>
+
+</html>

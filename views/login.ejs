@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../public/css/style.css"> -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
+    <title>Health Plus</title>
+    <!-- teko font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+
+    <!-- jquery for front-end functionality -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+    $("#otp").hide();
+    $(".log_in").css("padding-top","120px");
+    $("#otp_sent").click(function(){
+        $(".log_in").css("padding-top","37px");
+        $("#otp").show();
+        $("#otp_sent").hide();
+        $(".doc_otp").hide();
+    })
+})
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+
+body {
+    margin: 0;
+    background-color: #bdf4ed;
+    font-family: 'Teko', sans-serif;
+    font-size: 45px;
+    overflow-y: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(#5ef7ea, #BDF4ED);
+}
+
+header .logo {
+    width: 57px;
+}
+
+header .health_plus {
+    display: inline;
+}
+
+main {
+    display: flex;
+}
+
+.emergency {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.emergency span {
+    font-size: 75px;
+    color: #DC475A;
+}
+
+.logo {
+    position: relative;
+    top: 10px;
+    margin: 0 10px;
+}
+
+.header_plus {
+    position: absolute;
+    top: 20px;
+    
+}
+
+/* log in section */
+
+.log_in * {
+    font-size: 25px;
+}
+
+
+input {
+    border: none;
+    border-bottom: 2px solid rgb(115, 209, 249);
+    background-color: #bdf4ed;
+    height: 35px;
+}
+
+.log_in {
+    background: linear-gradient(#5ef7ea, rgb(115, 209, 249));
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    box-shadow: 0 8px 32px 0 #5ef7ea;
+    border-radius: 24px;
+    padding: 48px;
+}
+
+.log_in:where(input, div) {
+    color: #fff;
+    text-align-last: center;
+    margin: 0;
+    margin-right: 5%;
+    margin-bottom: 13%;
+}
+
+
+
+.log_in button {
+    color: #020e26;
+    background-color: transparent;
+    border: 1px solid #020e26;
+    border-radius: 48px;
+    padding: 12px 32px;
+    transition: 0.4s;
+}
+
+.log_in button:hover {
+    color: #fff;
+}
+
+.log_in button::before {
+    content: "";
+    position: absolute;
+    height: 62px;
+    width: 120px;
+    z-index: -1;
+    border-radius: 48px;
+    background-color: #3bd9d9;
+    transform: translate(-24px, -8px);
+    transition: 0.4s;
+}
+
+.doc_otp button::before{
+    content: "";
+    position: absolute;
+    height: 62px;
+    width: 277px;
+    z-index: -1;
+    border-radius: 48px;
+    background-color: #3bd9d9;
+    transform: translate(-24px, -8px);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.log_in button:hover::before {
+    background-image: linear-gradient(#97c29b, #3bd9d9);
+    transform: translate(-33px, -13px);
+}
+
+
+.enter_otp {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.enter_otp input {
+    width: 35px;
+}
+
+.enter_otp button {
+    color: #020e26;
+    background-color: transparent;
+    border: 1px solid #020e26;
+    border-radius: 48px;
+    padding: 12px 32px;
+    transition: 0.4s;
+}
+
+.enter_otp button:hover {
+    color: #fff;
+}
+
+.enter_otp button::before {
+    content: "";
+    position: absolute;
+    height: 62px;
+    width: 165px;
+    z-index: -1;
+    border-radius: 48px;
+    background-color: #3bd9d9;
+    transform: translate(-24px, -8px);
+    transition: 0.4s;
+}
+
+.enter_otp button:hover::before {
+    background-image: linear-gradient(#97c29b, #3bd9d9);
+    transform: translate(-33px, -13px);
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="/images/logo.png" alt="health-plus" class="logo">
+        <div class="health_plus">
+            <span>Health</span>
+            <img src="/images/plus.png" alt="Plus" class="header_plus">
+        </div>
+    </header>
+    <main>
+        <div class="emergency">
+            <a href="tel:+102"><img src="/images/ambulance.png" alt="emergency"></a>
+            <span>EMERGENCY</span>
+        </div>
+        <div class="log_in">
+            <form action="login" method="POST">
+                LOG IN
+                <input type="text" name="mobileNumber" placeholder="Enter valid phone number.." pattern="[0-9]{10}"
+                    required style="width:350px;">
+
+                <div class="send_otp">
+                    <button id="otp_sent">OTP</button>
+                </div>
+            </form>
+            <div>
+                <hr>
+                <form action="/doctor" method="get">
+                    <div class="doc_otp">
+                        <button id="doc_login">Professional Login</button>
+                    </div>
+                </form>
+            </div>
+            <div id="otp">
+
+                <p class="enter_otp">
+                    OTP has been sent to your phone number
+                </p>
+                <form action="verify" method="POST">
+                    <div class="enter_otp">
+                        <div>
+                            <input name="l1" type="text" minlength="1" maxlength="1" pattern="[0-9]" required>
+                        </div>
+                        <div>
+                            <input name="l2" type="text" minlength="1" maxlength="1" pattern="[0-9]" required>
+                        </div>
+                        <div>
+                            <input name="l3" type="text" minlength="1" maxlength="1" pattern="[0-9]" required>
+                        </div>
+                        <div>
+                            <input name="l4" type="text" minlength="1" maxlength="1" pattern="[0-9]" required>
+                        </div>
+                    </div>
+                    <div class="enter_otp">
+                        <button class>SUBMIT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

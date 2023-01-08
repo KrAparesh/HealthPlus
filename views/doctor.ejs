@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- teko font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.jpg">
+    <title>Professional Login</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+
+
+        body {
+            background-color: #bdf4ed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Teko',
+                sans-serif;
+        }
+
+        .subscribe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 945px;
+            height: 474px;
+            border-radius: 10px;
+            background: linear-gradient(#5ef7ea, rgb(115, 209, 249));
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            box-shadow: 0 8px 32px 0 #5ef7ea;
+            border-radius: 24px;
+            padding: 48px;
+        }
+
+        .subscribe__title {
+            font-size: 50px;
+            margin-bottom: 18px;
+        }
+
+        .form {
+            margin-bottom: 25px;
+        }
+
+        .form__id {
+            padding: 20px 25px;
+            border-radius: 5px;
+            border: 1px solid #CAD3DB;
+            width: 431px;
+            font-size: 18px;
+            color: #0F121F;
+        }
+
+        .PasswordInput {
+            padding: 20px 25px;
+            border-radius: 5px;
+            border: 1px solid #CAD3DB;
+            width: 431px;
+            font-size: 18px;
+            color: #0F121F;
+            margin: 25px 0;
+        }
+
+        .form__email:focus {
+            outline: 1px solid #3D9FFF;
+        }
+
+        .form__button {
+            background: #3D9FFF;
+            padding: 10px;
+            border: none;
+            width: 244px;
+            height: 65px;
+            position: relative;
+            border-radius: 5px;
+            font-size: 22px;
+            color: white;
+            margin: 25px 0;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(6, 7, 110, 0.897);
+        }
+
+        .form__button:hover {
+            box-shadow: 0 10px 20px rgba(6, 7, 110, 0.897);
+        }
+
+        .notice {
+            width: 345px;
+        }
+
+        .form-inp {
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="subscribe">
+        <h1 class="subscribe__title">PROFESSIONAL LOG IN</h1>
+        <p class="subscribe__copy"></p>
+        <form action="/doctor" method="POST">
+        <div class="form">
+            <div class="form-inp"> <label for="email"></label>
+                <input type="text" class="form__id" name="inpName" placeholder="Enter your ID" required />
+            </div>
+            <div class="form-inp"><label for="current-password"></label>
+                <input class="PasswordInput" name="currPassword" type="password" placeholder="Enter Password" value="" required>
+            </div>
+            <button class="form__button">Log in</button>
+        </div>
+    </form>
+    </div>
+</body>
+
+</html>
